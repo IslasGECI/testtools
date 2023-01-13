@@ -14,3 +14,12 @@ describe("Get version of the module", {
     expect_true(version_are_equal)
   })
 })
+
+describe("check if exists a file", {
+  it("The file exists", {
+    expect_true(exist_output_file("/workdir/README.md"))
+  })
+  it("The file not exists", {
+    expect_false(exist_output_file("/workdir/wereeeee.md"))
+  })
+})
