@@ -35,3 +35,12 @@ describe("is the right hash", {
   wrong_path <- "/workdir/coverage.R"
   expect_error(is_the_right_hash(coverage_hash, wrong_path))
 })
+
+describe("Delete file", {
+  file_path <- "file_to_delete.txt"
+  expect_false(file.exists(file_path))
+  write("nothing", file_path)
+  expect_true(file.exists(file_path))
+  delete_output_file(file_path)
+  expect_false(file.exists(file_path))
+})
