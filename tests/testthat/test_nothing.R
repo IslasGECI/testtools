@@ -23,3 +23,9 @@ describe("check if exists a file", {
     expect_false(exist_output_file("/workdir/wereeeee.md"))
   })
 })
+
+describe("is the right hash", {
+  expected_hash <- "4ae09d45eac4aa08d013b5f2e01c67f6"
+  file <- "/workdir/LICENSE"
+  expect_true(is_the_right_hash(expected_hash, file))
+})
