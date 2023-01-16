@@ -30,4 +30,6 @@ describe("is the right hash", {
   expect_true(is_the_right_hash(expected_hash, file))
   file <- "/workdir/tests/testthat/coverage.R"
   expect_false(is_the_right_hash(expected_hash, file))
+  coverage_hash <- "835e5108a7a502189ba9988e449124fc"
+  expect_true(is_the_right_hash(coverage_hash, file))
 })
