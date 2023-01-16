@@ -28,4 +28,6 @@ describe("is the right hash", {
   expected_hash <- "4ae09d45eac4aa08d013b5f2e01c67f6"
   file <- "/workdir/LICENSE"
   expect_true(is_the_right_hash(expected_hash, file))
+  file <- "/workdir/coverage.R"
+  expect_false(is_the_right_hash(expected_hash, file))
 })
