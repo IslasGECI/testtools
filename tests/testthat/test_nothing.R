@@ -32,4 +32,6 @@ describe("is the right hash", {
   expect_false(is_the_right_hash(license_hash, coverage_path))
   coverage_hash <- "835e5108a7a502189ba9988e449124fc"
   expect_true(is_the_right_hash(coverage_hash, coverage_path))
+  wrong_path <- "/workdir/coverage.R"
+  expect_error(is_the_right_hash(coverage_hash, wrong_path))
 })
