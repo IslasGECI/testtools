@@ -25,11 +25,11 @@ describe("check if exists a file", {
 })
 
 describe("is the right hash", {
-  expected_hash <- "4ae09d45eac4aa08d013b5f2e01c67f6"
-  file <- "/workdir/LICENSE"
-  expect_true(is_the_right_hash(expected_hash, file))
-  file <- "/workdir/tests/testthat/coverage.R"
-  expect_false(is_the_right_hash(expected_hash, file))
+  license_hash <- "4ae09d45eac4aa08d013b5f2e01c67f6"
+  license_path <- "/workdir/LICENSE"
+  expect_true(is_the_right_hash(license_hash, license_path))
+  coverage_path <- "/workdir/tests/testthat/coverage.R"
+  expect_false(is_the_right_hash(license_hash, coverage_path))
   coverage_hash <- "835e5108a7a502189ba9988e449124fc"
-  expect_true(is_the_right_hash(coverage_hash, file))
+  expect_true(is_the_right_hash(coverage_hash, coverage_path))
 })
