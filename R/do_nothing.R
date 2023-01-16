@@ -1,8 +1,3 @@
-return_one <- function() {
-  return(1)
-}
-
-
 exist_output_file <- function(path) {
   file.exists(path)
 }
